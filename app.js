@@ -20,6 +20,25 @@ function init() {
 }
 
 init();
+
+let cursor = document.querySelector("#cursor");
+let main = document.querySelector(".main");
+let video = document.querySelector("video");
+main.addEventListener("mousemove", function (desc) {
+    cursor.style.left = desc.x + "px";
+    cursor.style.top = desc.y + "px";
+})
+video.addEventListener("mouseenter", function () {
+    cursor.innerHTML = `<p>Sound on</p>`
+    cursor.classList.add("sound");
+    cursor.classList.remove("cursor");
+})
+video.addEventListener("mouseleave", function () {
+    cursor.innerText = "";
+    cursor.classList.add("cursor");
+    cursor.classList.remove("sound");
+})
+
 let tl = gsap.timeline({
     scrollTrigger: {
         trigger: ".page1 h1",

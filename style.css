@@ -9,6 +9,27 @@ html, body{
     height: 100%;
     width: 100%;
 }
+.cursor{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position: fixed;
+    background-color: #EDBFFF;
+    z-index: 2;
+    mix-blend-mode: difference;
+    /* transition: left linear 0.2s top linear 0.2s; */
+}
+.sound{
+    height: 20px;
+    width: 80px;
+    border-radius: 50px;
+    position: fixed;
+    background-color: #111;
+    z-index: 2;
+    color: #ffffff;
+    padding-left: 5px;
+    /* mix-blend-mode: difference; */
+}
 .main{
     background-color: #0F0D0D;
 
