@@ -15,7 +15,7 @@ html, body{
     border-radius: 50%;
     position: fixed;
     background-color: #EDBFFF;
-    z-index: 2;
+    z-index: 8;
     mix-blend-mode: difference;
     /* transition: left linear 0.2s top linear 0.2s; */
 }
@@ -25,7 +25,7 @@ html, body{
     border-radius: 50px;
     position: fixed;
     background-color: #111;
-    z-index: 2;
+    z-index: 8;
     color: #ffffff;
     padding-left: 5px;
     /* mix-blend-mode: difference; */
@@ -37,6 +37,8 @@ html, body{
 .page1{
     min-height: 100vh; 
     width: 100%;
+    position: relative;
+    z-index: 9;
 }
 #nav{
     height: 55px;
@@ -96,6 +98,8 @@ html, body{
     width: 100%;
     padding: 100px 5vw;
     border-bottom: 2px solid #6c6c6c;
+    position: relative;
+    z-index: 9;
 }
 .page2 h1{
     font-size: 7vw;
@@ -143,10 +147,11 @@ html, body{
 }
 
 .page3{
-    min-height: 250vh;
+    min-height: 170vh;
     width: 100%;
-    position: relative;
     padding-top: 100px;
+    position: relative;
+    z-index: 9;
 }
 .page3 h1{
     font-size: 6.8vw;
@@ -167,4 +172,62 @@ html, body{
 }
 .page3-part1 video{
     height: 400px;
+}
+.page4{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 9;
+    padding: 140px 100px;
+}
+.elem{
+    /* background-color: salmon; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 10px;
+}
+.elem img{
+    position: absolute;
+    opacity: 0;
+    transition: all ease-out 0.5s;
+    
+}
+.elem img:nth-child(1){
+    width: 400px;
+    left: 2%;
+    transform: translateY(10%) rotate(2deg);
+}
+.elem img:nth-child(3){
+    width: 300px;
+    right: 5%;
+    transform: translateY(10%) rotate(-2deg);
+}
+.text-div{
+    height: 145px;
+    padding-left: 30px;
+    overflow: hidden;
+}
+.elem h1{
+    font-size: 7.3vw;
+    font-weight: 600;
+    transition: all ease-out 0.5s;
+
+}
+.elem:hover h1{
+    transform: translateY(-100%);
+    color: #EDBFFF;
+}
+.elem:hover img{
+    opacity: 1;
+    transform: translateY(0%) rotate(0deg);
+}
+
+.page5{
+    min-height: 100vh;
+    width: 100%;
+    background-color: red;
+    position: relative;
+    z-index: 9;
 }
